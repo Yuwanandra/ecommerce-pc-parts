@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gunakan apply dengan benar, jangan override langsung */
+@layer base {
+  body {
+    @apply bg-yellow-100 font-sans;
+  }
+}
