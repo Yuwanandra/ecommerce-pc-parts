@@ -1,10 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  root: resolve(__dirname, 'client'), // <- point to the actual frontend folder
   plugins: [react()],
   server: {
-    port: 5173 // gunakan port pasti
+    port: 5173
+  },
+  build: {
+    outDir: '../dist', // <- put build output back in root-level dist
+    emptyOutDir: true
   }
 });
