@@ -1,4 +1,3 @@
 [build]
-  base = "client"
   command = "rm -rf node_modules && npm install && npm run build"
   publish = "dist"
